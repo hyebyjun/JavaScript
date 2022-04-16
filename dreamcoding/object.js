@@ -106,6 +106,7 @@ console.log(person5);
 let object = { one: 1, two: 2, three: 3, name: 'olla' }; // 오브젝트
 let { name: myname, one: oneOne, two, three, abc = 'four' } = object;
 // let { key: new varName, newVar='객체에 없을 경우 설정할 기본값 설정 가능' }
+console.log('원래 object', object);
 console.log('비구조화 할당 :', myname, oneOne, two, abc, three);
 
 
@@ -163,7 +164,7 @@ const user2 = user;
 // Q. user2의 속성을 바꾸면 user에도 영향을 미칠까?
 user2.name = 'coder';
 // user2의 이름 속성을 바꾼 거면, user2는 당연히 바뀌어도 user는 그대로여야 할 것 같은데.
-console.log(user); // 와 user가 바뀌는기고..
+console.log('user :', user); // 와 user가 바뀌는기고..
 // 이게 복사되었지만 서로 다른 being 객체가 아니고..
 // user2 = { name: 'ellie', age: 25 } << -- 복사된 데이터가 아니고..
 // user2 = { name: user꺼 네임 데이터를 끌어오는 포털?, age: 쌤쌤 } 같은 느낌인가벼..
@@ -175,12 +176,12 @@ const user3 = {}; // 텅텅 빈 객체를 하나 만들고
 for (key in user) {
   user3[key] = user[key];
 }
-console.log(user3);
+console.log('user3', user3);
 user2.name = 'origin';
 user3.name = 'num333';
-console.log(user);
-console.log(user2);
-console.log(user3);
+console.log('user', user);
+console.log('user2', user2);
+console.log('user3', user3);
 
 // 방법 2 : 기본적으로 내장된 모듈..?
 // Object.assign(복사본명, 원본객체명);
