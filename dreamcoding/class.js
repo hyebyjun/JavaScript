@@ -5,6 +5,7 @@
 // - introduced in ES6
 // - syntactical sugar over prototype-based inheritance
 
+
 // 1️⃣. Class declarations
 class Person {
   // constructor
@@ -23,6 +24,7 @@ const helli = new Person('hllie', 20);
 console.log(helli.name);
 console.log(helli.age);
 helli.speak();
+
 
 // 2️⃣. Getter and Setter
 class User {
@@ -133,3 +135,5 @@ console.log(triangle instanceof Rectangle);
 console.log(triangle instanceof Triangle);
 console.log(triangle instanceof Shape);
 console.log(triangle instanceof Object);
+
+
